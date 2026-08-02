@@ -69,6 +69,19 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
 .wl .n{font-family:'Caveat',cursive;font-size:1rem;font-weight:700;color:#a07840;min-width:28px}
 .semana-section{display:none}
 .semana-section.active{display:block}
+.scene-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:1rem 0}
+.scene-imgs img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:2px;border:1px solid #d4bc8a;cursor:pointer;transition:opacity 0.2s}
+.scene-imgs img:hover{opacity:0.85}
+.scene-block{margin-bottom:1.6rem;padding-bottom:1.4rem;border-bottom:1px dashed #d4bc8a}
+.scene-block:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.scene-title{font-family:'Caveat',cursive;font-size:1.5rem;font-weight:700;color:#5a3e1b;margin-bottom:0.5rem}
+.scene-meta{font-size:0.85rem;color:#8b7050;font-style:italic;margin-bottom:0.6rem}
+.scene-meta strong{color:#5a3e1b;font-style:normal}
+.scene-dialog{background:#f7f0dc;border-left:3px solid #c4a86b;padding:0.6rem 0.9rem;margin:0.6rem 0;font-size:0.98rem;line-height:1.6}
+.scene-dialog p{margin:0.2rem 0}
+.scene-sub{font-family:'Caveat',cursive;font-style:italic;color:#8b6025;font-size:1.05rem;margin-top:0.6rem}
+.char-card{background:#f7f0dc;border:1px solid #d4bc8a;padding:0.9rem 1.1rem;border-radius:2px;margin-bottom:0.8rem}
+.char-card h4{font-family:'Caveat',cursive;font-size:1.3rem;color:#5a3e1b;margin-bottom:0.3rem}
 @media(max-width:780px){
   .layout{grid-template-columns:1fr;gap:1rem}
   .feed{padding:1.5rem;margin-left:0}
@@ -96,6 +109,8 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
   <button data-target="semana-3">Semana 3</button>
   <button data-target="semana-4">Semana 4</button>
   <button data-target="semana-5">Semana 5</button>
+  <button data-target="semana-6">Semana 6</button>
+  <button data-target="semana-7">Semana 7</button>
 </nav>
 
 <div class="layout">
@@ -255,6 +270,140 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
       </div>
     </div>
 
+    <!-- SEMANA 6: CORTOMETRAJE - EL NIÑO Y LA PIEDRA -->
+    <div class="semana-section" id="semana-6">
+      <div class="card">
+        <div class="tape l"></div><div class="tape r"></div>
+        <div class="ew">🎥 Semana 6</div>
+        <div class="et">Cortometraje: La piedra que no se lanzó</div>
+        <div class="em">Storyboard de 12 escenas — 1 minuto de duración</div>
+        <div class="eb">Storyboard de un cortometraje generado con IA que narra el momento en que un niño es objeto de burlas por parte de otros chicos del barrio, sostiene una piedra en la mano pero decide no lanzarla. Su padre lo consuela, lo lleva a hablar con el abuelo del vecindario, y finalmente padre e hijo cierran el día caminando juntos hacia el atardecer. Doce escenas de 5 segundos cada una que construyen un arco emocional completo.</div>
+      </div>
+
+      <div class="card">
+        <div class="st">🎬 Storyboard (12 escenas — 00:00 a 01:00)</div>
+        <div id="framesSection6" class="frames-section"></div>
+        <div class="tags">
+          <span class="tag">Cortometraje</span>
+          <span class="tag">IA Generativa</span>
+          <span class="tag">Storyboard</span>
+          <span class="tag">Narrativa emocional</span>
+          <span class="tag">Relación padre-hijo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMANA 7: GUION CORTOMETRAJE - LA LECCIÓN DEL RESPETO -->
+    <div class="semana-section" id="semana-7">
+      <div class="card">
+        <div class="tape l"></div><div class="tape r"></div>
+        <div class="ew">Semana 7</div>
+        <div class="et">Cortometraje: "La lección del respeto"</div>
+        <div class="em">Inspirado en <em>El olvido que seremos</em>, de Héctor Abad Faciolince</div>
+        <div class="eb">Guion completo del cortometraje desarrollado en la Semana 6, con descripción visual, diálogos, música, efectos de sonido y subtítulos para cada una de las cuatro escenas principales. Duración total de un minuto, dividido en doce fragmentos de cinco segundos.</div>
+
+        <div class="char-card">
+          <h4>Padre</h4>
+          <div class="eb" style="margin-bottom:0">Hombre colombiano de aproximadamente 45 años. Cabello corto negro con algunas canas. Camisa blanca de manga larga, pantalón oscuro. Expresión tranquila, pero firme cuando corrige.</div>
+        </div>
+        <div class="char-card">
+          <h4>Hijo</h4>
+          <div class="eb" style="margin-bottom:0">Niño colombiano de 10 años. Cabello corto negro. Camiseta azul, jean y tenis blancos. Curioso, inocente y fácilmente influenciable.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="scene-block">
+          <div class="scene-title">ESCENA 1 — La mala decisión</div>
+          <div class="scene-meta"><strong>Lugar:</strong> Exterior de un barrio residencial de Medellín en los años 70. Casas sencillas de ladrillo, árboles, andén amplio y ambiente de barrio tradicional. &nbsp;|&nbsp; <strong>Hora:</strong> Tarde soleada.</div>
+          <div class="scene-imgs">
+            <img src="1.png" alt="Escena 1A" onclick="openLb('1.png','Escena 1A — 00:00 a 00:05')">
+            <img src="2.png" alt="Escena 1B" onclick="openLb('2.png','Escena 1B — 00:05 a 00:10')">
+            <img src="3.png" alt="Escena 1C" onclick="openLb('3.png','Escena 1C — 00:10 a 00:15')">
+          </div>
+          <div class="eb">El hijo está junto a otros niños frente a una casa. Algunos empiezan a lanzar pequeñas piedras y a gritar insultos. El protagonista duda unos segundos, pero termina imitando a los demás. La cámara comienza con un plano general del barrio y luego hace un acercamiento lento al rostro del niño, mostrando que está confundido.</div>
+          <div class="eb"><strong>Emociones:</strong> inseguridad y presión por pertenecer al grupo en el niño; tensión creciente en el ambiente.</div>
+          <div class="eb"><strong>Música:</strong> piano suave con notas de suspenso. &nbsp;|&nbsp; <strong>Efectos de sonido:</strong> niños gritando, piedras cayendo sobre el suelo, viento ligero, pájaros.</div>
+          <div class="scene-sub">"A veces hacemos cosas solo por seguir a los demás."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-title">ESCENA 2 — El padre interviene</div>
+          <div class="scene-meta"><strong>Lugar:</strong> Frente a la misma casa. &nbsp;|&nbsp; <strong>Hora:</strong> Continúa la tarde.</div>
+          <div class="scene-imgs">
+            <img src="4.png" alt="Escena 2A" onclick="openLb('4.png','Escena 2A — 00:15 a 00:20')">
+            <img src="5.png" alt="Escena 2B" onclick="openLb('5.png','Escena 2B — 00:20 a 00:25')">
+            <img src="6.png" alt="Escena 2C" onclick="openLb('6.png','Escena 2C — 00:25 a 00:30')">
+          </div>
+          <div class="eb">El padre llega caminando después del trabajo. Observa todo en silencio. Su expresión cambia de tranquilidad a decepción. Se acerca lentamente, toma al hijo del brazo sin violencia y lo mira directamente a los ojos. La cámara cambia a un primer plano de ambos rostros.</div>
+          <div class="scene-dialog">
+            <p><strong>Padre</strong> — Eso no está bien.</p>
+            <p><strong>Padre</strong> — Ven conmigo.</p>
+            <p><em>El hijo baja la cabeza y lo sigue.</em></p>
+          </div>
+          <div class="eb"><strong>Música:</strong> el piano se vuelve más serio. &nbsp;|&nbsp; <strong>Efectos:</strong> pasos, silencio del grupo, ambiente de barrio.</div>
+          <div class="scene-sub">"Un verdadero padre enseña con el ejemplo."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-title">ESCENA 3 — El perdón</div>
+          <div class="scene-meta"><strong>Lugar:</strong> Puerta de la casa del vecino.</div>
+          <div class="scene-imgs">
+            <img src="7.png" alt="Escena 3A" onclick="openLb('7.png','Escena 3A — 00:30 a 00:35')">
+            <img src="8.png" alt="Escena 3B" onclick="openLb('8.png','Escena 3B — 00:35 a 00:40')">
+            <img src="9.png" alt="Escena 3C" onclick="openLb('9.png','Escena 3C — 00:40 a 00:45')">
+          </div>
+          <div class="eb">El padre toca la puerta. Sale el vecino. El hijo respira profundo. El padre coloca una mano sobre el hombro del niño, transmitiendo apoyo.</div>
+          <div class="scene-dialog">
+            <p><strong>Padre</strong> — Mi hijo quiere decirle algo.</p>
+            <p><strong>Hijo</strong> — Perdón... no debí hacer eso.</p>
+            <p><em>El vecino asiente con la cabeza.</em></p>
+          </div>
+          <div class="eb"><strong>Emociones:</strong> vergüenza, arrepentimiento, comprensión. &nbsp;|&nbsp; <strong>Música:</strong> piano emotivo. &nbsp;|&nbsp; <strong>Efectos:</strong> puerta abriéndose, viento suave, ambiente silencioso.</div>
+          <div class="scene-sub">"Pedir perdón requiere valentía."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-title">ESCENA 4 — La enseñanza</div>
+          <div class="scene-meta"><strong>Lugar:</strong> Parque tranquilo con árboles. &nbsp;|&nbsp; <strong>Hora:</strong> Atardecer.</div>
+          <div class="scene-imgs">
+            <img src="10.png" alt="Escena 4A" onclick="openLb('10.png','Escena 4A — 00:45 a 00:50')">
+            <img src="11.png" alt="Escena 4B" onclick="openLb('11.png','Escena 4B — 00:50 a 00:55')">
+            <img src="12.png" alt="Escena 4C" onclick="openLb('12.png','Escena 4C — 00:55 a 01:00')">
+          </div>
+          <div class="eb">Padre e hijo caminan lentamente por un sendero. La luz del sol atraviesa los árboles. El padre se agacha para quedar a la altura del niño mientras conversa con él.</div>
+          <div class="scene-dialog">
+            <p><strong>Padre</strong> — Nunca juzgues a una persona por su origen, su religión o por lo que dicen los demás.</p>
+            <p><strong>Padre</strong> — Cada ser humano merece respeto.</p>
+            <p><em>El hijo asiente. Ambos continúan caminando mientras la cámara se aleja lentamente.</em></p>
+          </div>
+          <div class="eb"><strong>Música:</strong> piano y violín instrumental emotivos. &nbsp;|&nbsp; <strong>Efectos:</strong> pájaros, viento entre los árboles, hojas moviéndose.</div>
+          <div class="scene-sub">"El respeto y la empatía son lecciones que nunca debemos olvidar."</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="st">Estilo visual para la IA</div>
+        <ul class="wl">
+          <li><span class="n">•</span> Calidad cinematográfica 4K</li>
+          <li><span class="n">•</span> Relación de aspecto 16:9</li>
+          <li><span class="n">•</span> Iluminación natural y cálida</li>
+          <li><span class="n">•</span> Colores realistas con ligero tono nostálgico</li>
+          <li><span class="n">•</span> Cámara estable con movimientos lentos</li>
+          <li><span class="n">•</span> Profundidad de campo cinematográfica</li>
+          <li><span class="n">•</span> Expresiones faciales muy naturales</li>
+          <li><span class="n">•</span> ~15 segundos por escena, hasta completar 1 minuto</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Guion</span>
+          <span class="tag">Cortometraje</span>
+          <span class="tag">Héctor Abad Faciolince</span>
+          <span class="tag">Relación padre-hijo</span>
+          <span class="tag">Respeto y empatía</span>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <aside class="sidebar">
@@ -297,6 +446,21 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
       <ul class="wl">
         <li><span class="n">1</span> Análisis videoclip</li>
         <li><span class="n">✓</span> Jangadero - Milo J</li>
+      </ul>
+    </div>
+
+    <div class="sw">
+      <div class="st">Semana 6</div>
+      <ul class="wl">
+        <li><span class="n">12</span> Escenas storyboard</li>
+        <li><span class="n">✓</span> Cortometraje IA</li>
+      </ul>
+    </div>
+    <div class="sw">
+      <div class="st">Semana 7</div>
+      <ul class="wl">
+        <li><span class="n">4</span> Escenas del guion</li>
+        <li><span class="n">✓</span> "La lección del respeto"</li>
       </ul>
     </div>
   </aside>
@@ -371,6 +535,27 @@ const prompts3 = Array(20).fill(0).map((_, i) => [
   "Proceso de preparación de la Bandeja Paisa — Plato tradicional colombiano de Antioquia"
 ]);
 
+// SEMANA 6: Storyboard cortometraje (12 escenas)
+const imgs6 = [
+  "1.png","2.png","3.png","4.png","5.png","6.png",
+  "7.png","8.png","9.png","10.png","11.png","12.png"
+];
+
+const prompts6 = [
+  ["Escena 1A — 00:00 a 00:05", "Un niño sostiene una piedra en la mano mientras otros chicos juegan y se burlan a lo lejos en una calle de barrio."],
+  ["Escena 1B — 00:05 a 00:10", "Los otros niños se ríen y lanzan piedras entre ellos; el protagonista los observa de reojo, tenso."],
+  ["Escena 1C — 00:10 a 00:15", "El niño baja la mirada hacia la piedra en su mano mientras el resto del grupo se aleja por la calle."],
+  ["Escena 2A — 00:15 a 00:20", "El padre llega y pone la mano en el hombro del niño, mirándolo con preocupación."],
+  ["Escena 2B — 00:20 a 00:25", "Padre e hijo caminan juntos por la calle arbolada, el padre hablándole con calma."],
+  ["Escena 2C — 00:25 a 00:30", "Continúan caminando de espaldas a cámara por la vereda del barrio."],
+  ["Escena 3A — 00:30 a 00:35", "Llegan a la puerta de una casa donde un abuelo del vecindario los recibe."],
+  ["Escena 3B — 00:35 a 00:40", "El niño escucha atento mientras el padre y el abuelo conversan junto a la reja."],
+  ["Escena 3C — 00:40 a 00:45", "El abuelo sonríe con calidez mientras el padre mantiene la mano en el hombro del niño."],
+  ["Escena 4A — 00:45 a 00:50", "Padre e hijo se sientan juntos en una banca del parque al atardecer, conversando."],
+  ["Escena 4B — 00:50 a 00:55", "El padre le explica algo mientras caminan por el parque, el niño lo mira con atención."],
+  ["Escena 4C — 00:55 a 01:00", "Padre e hijo se alejan juntos de espaldas hacia la luz del atardecer entre los árboles."]
+];
+
 // ========== FUNCIONALIDAD ==========
 
 // VIDEO PLAYER (SEMANA 1)
@@ -422,6 +607,7 @@ function renderFrames(containerId, images, prompts) {
 
 renderFrames('framesSection2', imgs2, prompts2);
 renderFrames('framesSection3', imgs3, prompts3);
+renderFrames('framesSection6', imgs6, prompts6);
 
 // LIGHTBOX
 function openLb(src, cap) {
