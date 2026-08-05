@@ -270,34 +270,11 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
       </div>
     </div>
 
-    <!-- SEMANA 6: CORTOMETRAJE - EL NIÑO Y LA PIEDRA -->
+    <!-- SEMANA 6: GUION CORTOMETRAJE - LA LECCIÓN DEL RESPETO -->
     <div class="semana-section" id="semana-6">
       <div class="card">
         <div class="tape l"></div><div class="tape r"></div>
         <div class="ew">🎥 Semana 6</div>
-        <div class="et">Cortometraje: La piedra que no se lanzó</div>
-        <div class="em">Storyboard de 12 escenas — 1 minuto de duración</div>
-        <div class="eb">Storyboard de un cortometraje generado con IA que narra el momento en que un niño es objeto de burlas por parte de otros chicos del barrio, sostiene una piedra en la mano pero decide no lanzarla. Su padre lo consuela, lo lleva a hablar con el abuelo del vecindario, y finalmente padre e hijo cierran el día caminando juntos hacia el atardecer. Doce escenas de 5 segundos cada una que construyen un arco emocional completo.</div>
-      </div>
-
-      <div class="card">
-        <div class="st">🎬 Storyboard (12 escenas — 00:00 a 01:00)</div>
-        <div id="framesSection6" class="frames-section"></div>
-        <div class="tags">
-          <span class="tag">Cortometraje</span>
-          <span class="tag">IA Generativa</span>
-          <span class="tag">Storyboard</span>
-          <span class="tag">Narrativa emocional</span>
-          <span class="tag">Relación padre-hijo</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- SEMANA 7: GUION CORTOMETRAJE - LA LECCIÓN DEL RESPETO -->
-    <div class="semana-section" id="semana-7">
-      <div class="card">
-        <div class="tape l"></div><div class="tape r"></div>
-        <div class="ew">Semana 7</div>
         <div class="et">Cortometraje: "La lección del respeto"</div>
         <div class="em">Inspirado en <em>El olvido que seremos</em>, de Héctor Abad Faciolince</div>
         <div class="eb">Guion completo del cortometraje desarrollado en la Semana 6, con descripción visual, diálogos, música, efectos de sonido y subtítulos para cada una de las cuatro escenas principales. Duración total de un minuto, dividido en doce fragmentos de cinco segundos.</div>
@@ -404,6 +381,27 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
       </div>
     </div>
 
+    <!-- SEMANA 7 -->
+    <div class="semana-section" id="semana-7">
+      <div class="card">
+        <div class="tape l"></div><div class="tape r"></div>
+        <div class="ew">🎬 Semana 7</div>
+        <div class="et">Video del cortometraje</div>
+        <div class="em">Este cortometraje está inspirado en <em>El olvido que seremos</em> de Héctor Abad Faciolince y adapta una de las enseñanzas más importantes de la obra: el respeto hacia los demás.</div>
+        <div class="eb">A través de cuatro escenas, se muestra cómo un padre corrige con amor a su hijo después de que este participa en un acto de discriminación. La historia resalta valores como la empatía, el perdón y la importancia de reconocer los errores, demostrando que las verdaderas lecciones se aprenden con el ejemplo y el diálogo.</div>
+      </div>
+
+      <div class="card">
+        <div class="st">▶ Video</div>
+        <div class="video-player-wrap">
+          <video id="vidS7" class="main-video" controls>
+            <source src="202608031318 (1).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="pn">Ruta del archivo: video_semana7.mp4</div>
+      </div>
+    </div>
+
   </main>
 
   <aside class="sidebar">
@@ -452,15 +450,14 @@ nav button.active,nav a.active{font-weight:700;border-bottom:2px solid #8b6025}
     <div class="sw">
       <div class="st">Semana 6</div>
       <ul class="wl">
-        <li><span class="n">12</span> Escenas storyboard</li>
-        <li><span class="n">✓</span> Cortometraje IA</li>
+        <li><span class="n">4</span> Escenas del guion</li>
+        <li><span class="n">✓</span> "La lección del respeto"</li>
       </ul>
     </div>
     <div class="sw">
       <div class="st">Semana 7</div>
       <ul class="wl">
-        <li><span class="n">4</span> Escenas del guion</li>
-        <li><span class="n">✓</span> "La lección del respeto"</li>
+        <li><span class="n">1</span> Video del cortometraje</li>
       </ul>
     </div>
   </aside>
@@ -535,27 +532,6 @@ const prompts3 = Array(20).fill(0).map((_, i) => [
   "Proceso de preparación de la Bandeja Paisa — Plato tradicional colombiano de Antioquia"
 ]);
 
-// SEMANA 6: Storyboard cortometraje (12 escenas)
-const imgs6 = [
-  "1.png","2.png","3.png","4.png","5.png","6.png",
-  "7.png","8.png","9.png","10.png","11.png","12.png"
-];
-
-const prompts6 = [
-  ["Escena 1A — 00:00 a 00:05", "Un niño sostiene una piedra en la mano mientras otros chicos juegan y se burlan a lo lejos en una calle de barrio."],
-  ["Escena 1B — 00:05 a 00:10", "Los otros niños se ríen y lanzan piedras entre ellos; el protagonista los observa de reojo, tenso."],
-  ["Escena 1C — 00:10 a 00:15", "El niño baja la mirada hacia la piedra en su mano mientras el resto del grupo se aleja por la calle."],
-  ["Escena 2A — 00:15 a 00:20", "El padre llega y pone la mano en el hombro del niño, mirándolo con preocupación."],
-  ["Escena 2B — 00:20 a 00:25", "Padre e hijo caminan juntos por la calle arbolada, el padre hablándole con calma."],
-  ["Escena 2C — 00:25 a 00:30", "Continúan caminando de espaldas a cámara por la vereda del barrio."],
-  ["Escena 3A — 00:30 a 00:35", "Llegan a la puerta de una casa donde un abuelo del vecindario los recibe."],
-  ["Escena 3B — 00:35 a 00:40", "El niño escucha atento mientras el padre y el abuelo conversan junto a la reja."],
-  ["Escena 3C — 00:40 a 00:45", "El abuelo sonríe con calidez mientras el padre mantiene la mano en el hombro del niño."],
-  ["Escena 4A — 00:45 a 00:50", "Padre e hijo se sientan juntos en una banca del parque al atardecer, conversando."],
-  ["Escena 4B — 00:50 a 00:55", "El padre le explica algo mientras caminan por el parque, el niño lo mira con atención."],
-  ["Escena 4C — 00:55 a 01:00", "Padre e hijo se alejan juntos de espaldas hacia la luz del atardecer entre los árboles."]
-];
-
 // ========== FUNCIONALIDAD ==========
 
 // VIDEO PLAYER (SEMANA 1)
@@ -607,7 +583,6 @@ function renderFrames(containerId, images, prompts) {
 
 renderFrames('framesSection2', imgs2, prompts2);
 renderFrames('framesSection3', imgs3, prompts3);
-renderFrames('framesSection6', imgs6, prompts6);
 
 // LIGHTBOX
 function openLb(src, cap) {
